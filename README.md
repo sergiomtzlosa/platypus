@@ -14,7 +14,6 @@
 - **🎨 Mixed Syntax**: Combines JavaScript and Scala idioms for expressiveness
 - **🔥 Pattern Matching**: Powerful match expressions for control flow
 - **⚡ Higher-Order Functions**: First-class functions and lambdas
-- **🔒 Type Annotations**: Optional type hints for function returns
 
 ## 📦 Installation
 
