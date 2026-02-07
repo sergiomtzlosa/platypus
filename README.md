@@ -309,7 +309,6 @@ platypus/
     ├── functions.plat      # Function examples
     ├── pattern_matching.plat
     ├── control_flow.plat   # Control structures
-    ├── design_patterns.plat # OOP patterns
     └── showcase.plat       # Complete feature demo
 ```
 
