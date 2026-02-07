@@ -214,20 +214,6 @@ Run it:
 platypus run examples/control_flow.plat
 ```
 
-### Design Patterns Example
-
-See [`examples/design_patterns.plat`](examples/design_patterns.plat) for OOP-style patterns using closures:
-- Singleton pattern
-- Factory pattern
-- Inheritance pattern
-- Builder pattern
-- Observer pattern
-
-Run it:
-```bash
-platypus run examples/design_patterns.plat
-```
-
 ### Pattern Matching Example
 
 See [`examples/pattern_matching.plat`](examples/pattern_matching.plat):
