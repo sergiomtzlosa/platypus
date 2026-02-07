@@ -1,0 +1,60 @@
+// Comprehensive example demonstrating private variable encapsulation
+
+class BankAccount {
+    accountHolder = "John Doe"
+    balance = 5000
+    _overdraftLimit = 500
+    _transactionHistory = 0
+    
+    func getBalance() {
+        print(balance)
+    }
+    
+    func deposit(amount) {
+        balance = balance + amount
+        _transactionHistory = _transactionHistory + 1
+    }
+    
+    func withdraw(amount) {
+        if (balance - amount >= (0 - _overdraftLimit)) {
+            balance = balance - amount
+            _transactionHistory = _transactionHistory + 1
+            print("Withdrawal successful")
+        } else {
+            print("Insufficient funds (including overdraft limit)")
+        }
+    }
+    
+    func getTransactionCount() {
+        print("Total transactions: ")
+        print(_transactionHistory)
+    }
+}
+
+print("=== Bank Account with Private Variables ===")
+print("")
+
+account = new BankAccount()
+
+print("Account Holder: " + account.accountHolder)
+print("Public Balance: $")
+account.getBalance()
+print("")
+
+print("Depositing $1000...")
+account.deposit(1000)
+print("New Balance: $")
+account.getBalance()
+account.getTransactionCount()
+print("")
+
+print("Withdrawing $500...")
+account.withdraw(500)
+print("New Balance: $")
+account.getBalance()
+account.getTransactionCount()
+print("")
+
+print("Attempting to access private _overdraftLimit (will fail):")
+print("(Private variables cannot be accessed from outside the class)")
+

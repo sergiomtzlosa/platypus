@@ -1,0 +1,82 @@
+// Comprehensive example demonstrating all privacy features
+// Private variables, functions, and classes working together
+
+// Private helper function
+func _validateInput(value) {
+    if (value < 0) {
+        print("Error: negative value")
+        return false
+    }
+    return true
+}
+
+// Private internal class - only used internally
+class _InternalBuffer {
+    _data = 0
+    _capacity = 100
+    
+    func store(value) {
+        if (value <= _capacity) {
+            _data = value
+        }
+    }
+    
+    func retrieve() {
+        print(_data)
+    }
+}
+
+// Public calculator class
+class Calculator {
+    _lastResult = 0
+    _buffer = null
+    
+    func initialize() {
+        // Can instantiate private classes from within public class methods
+        _buffer = new _InternalBuffer()
+    }
+    
+    func add(a, b) {
+        if (_validateInput(a) && _validateInput(b)) {
+            _lastResult = a + b
+            _buffer.store(_lastResult)
+            print("Sum: ")
+            print(_lastResult)
+        }
+    }
+    
+    func multiply(a, b) {
+        if (_validateInput(a) && _validateInput(b)) {
+            _lastResult = a * b
+            _buffer.store(_lastResult)
+            print("Product: ")
+            print(_lastResult)
+        }
+    }
+    
+    func getLastResult() {
+        print("Last result: ")
+        _buffer.retrieve()
+    }
+}
+
+print("=== Comprehensive Privacy Example ===")
+print("")
+
+calc = new Calculator()
+calc.initialize()
+
+print("Adding 5 + 3:")
+calc.add(5, 3)
+
+print("Multiplying 4 * 6:")
+calc.multiply(4, 6)
+
+print("Getting last result:")
+calc.getLastResult()
+
+print("")
+print("=== Privacy Features Working Together ===")
+print("✓ Private variables (_lastResult, _buffer) - encapsulated within Calculator")
+print("✓ Private function (_validateInput) - called from within public methods")
+print("✓ Private class (_InternalBuffer) - instantiated from public class methods")

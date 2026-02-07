@@ -1,0 +1,18 @@
+[package]
+name = "platypus"
+version = "0.1.0"
+edition = "2021"
+authors = ["Platypus Contributors"]
+description = "A compiled programming language combining JavaScript flexibility with Scala elegance"
+license = "MIT"
+
+[[bin]]
+name = "platypus"
+path = "src/main.rs"
+
+[dependencies]
+# No external dependencies for the initial implementation
+# We'll build everything from scratch to understand the compiler internals
+
+[dev-dependencies]
+# For testing

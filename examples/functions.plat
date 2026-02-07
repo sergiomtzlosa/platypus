@@ -1,0 +1,24 @@
+// Function declaration with type annotation
+func double(n): Number {
+    return n * 2
+}
+
+// Function that returns a dynamic type
+func identifyType(value): String {
+    return typeof(value)
+}
+
+// Test the functions
+result = double(21)
+print(result)
+
+// Test with arrays
+items = [1, 2, 3, 4, 5]
+print(items)
+
+// Identity types
+print(identifyType("Platypus"))
+print(identifyType(42))
+print(identifyType(true))
+print(identifyType([1, 2, 3]))
+

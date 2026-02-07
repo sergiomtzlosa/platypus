@@ -1,0 +1,10 @@
+// Hello World example
+greeting = "Hello, world!"
+print(greeting)
+
+// Variable assignments
+count = 42
+items = [1, 2, 3]
+
+print(count)
+print(items)

@@ -1,0 +1,32 @@
+// Example demonstrating private functions with "_" prefix
+
+func _internalHelper(x) {
+    print("Internal helper called with: ")
+    print(x)
+    return x * 2
+}
+
+func publicFunction(x) {
+    print("Public function called")
+    // Can call private functions from within public functions
+    result = _internalHelper(x)
+    print("Result: ")
+    print(result)
+    return result
+}
+
+func anotherPublic() {
+    // Private functions can be called from any function
+    value = _internalHelper(5)
+    print("Got value: ")
+    print(value)
+}
+
+print("=== Calling Public Functions ===")
+publicFunction(10)
+print("")
+anotherPublic()
+
+print("")
+print("=== Attempting to call private function directly (will fail) ===")
+print("(Private functions cannot be called from global scope)")

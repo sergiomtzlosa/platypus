@@ -1,0 +1,31 @@
+// Test that external access to private variables is blocked
+
+class BankAccount {
+    balance = 1000
+    _pin = "1234"
+    
+    func getBalance() {
+        print(balance)
+    }
+    
+    func checkPin(attempted) {
+        if (attempted == _pin) {
+            print("PIN correct!")
+        } else {
+            print("PIN incorrect!")
+        }
+    }
+}
+
+account = new BankAccount()
+
+// This works - accessing public property
+print("Public balance:")
+print(account.balance)
+
+// This works - calling method
+account.checkPin("1234")
+
+// This should fail - accessing private property
+print("Trying to access private _pin:")
+print(account._pin)

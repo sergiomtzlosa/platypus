@@ -1,0 +1,79 @@
+// For and ForEach Loop Examples
+
+// 1. Traditional C-style for loop
+print("=== Traditional For Loop ===")
+for (i = 0; i < 5; i = i + 1) {
+    print(i)
+}
+
+// 2. For loop with custom step
+print("\n=== For Loop (Step by 2) ===")
+for (j = 0; j <= 10; j = j + 2) {
+    print(j)
+}
+
+// 3. For loop countdown
+print("\n=== For Loop (Countdown) ===")
+for (k = 5; k > 0; k = k - 1) {
+    print(k)
+}
+
+// 4. ForEach loop with array
+print("\n=== ForEach Loop ===")
+colors = ["Red", "Green", "Blue", "Yellow"]
+for (color in colors) {
+    print(color)
+}
+
+// 5. ForEach with numbers
+print("\n=== ForEach with Numbers ===")
+numbers = [10, 20, 30, 40, 50]
+for (num in numbers) {
+    sum = num + 5
+    print(sum)
+}
+
+// 6. Nested for loops
+print("\n=== Nested For Loops (Multiplication Table) ===")
+for (row = 1; row <= 3; row = row + 1) {
+    for (col = 1; col <= 3; col = col + 1) {
+        result = row * col
+        print(result)
+    }
+}
+
+// 7. For loop with sum accumulator
+print("\n=== For Loop (Sum 1 to 10) ===")
+total = 0
+for (x = 1; x <= 10; x = x + 1) {
+    total = total + x
+}
+print(total)
+
+// 8. For loop computing factorial
+print("\n=== For Loop (Factorial 5) ===")
+factorial = 1
+for (n = 1; n <= 5; n = n + 1) {
+    factorial = factorial * n
+}
+print(factorial)
+
+// 9. ForEach with pattern matching
+print("\n=== ForEach with Pattern Matching ===")
+values = ["apple", "banana", "cherry"]
+for (item in values) {
+    type_name = typeof(item)
+    print(type_name)
+}
+
+// 10. For loop with break-like behavior using if
+print("\n=== For Loop (Early Termination) ===")
+found = false
+for (idx = 0; idx < 10; idx = idx + 1) {
+    if (idx == 7) {
+        found = true
+    }
+    if (found) {
+        print(idx)
+    }
+}

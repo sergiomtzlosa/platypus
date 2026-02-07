@@ -1,0 +1,151 @@
+// Class examples demonstrating object-oriented programming
+
+// 1. Simple class definition
+print("=== Simple Class - Property Access ===")
+class Animal {
+    name = "Dog";
+    species = "Canine";
+    
+    func speak() {
+        print("Animal speaks")
+    }
+}
+
+animal = new Animal()
+print(animal.name)
+print(animal.species)
+animal.speak()
+
+// 2. Class with modified properties
+print("\n=== Class with Property Modification ===")
+class Person {
+    name = "John";
+    age = 25;
+}
+
+person = new Person()
+print(person.name)
+person.name = "Alice"
+print(person.name)
+person.age = 30
+print(person.age)
+
+// 3. Class with methods using local scope
+print("\n=== Class with Methods ===")
+class Greeter {
+    greeting = "Hello";
+    
+    func sayHello() {
+        print(greeting)
+    }
+}
+
+greeter = new Greeter()
+greeter.sayHello()
+greeter.greeting = "Hi there"
+greeter.sayHello()
+
+// 4. Class with return values
+print("\n=== Class Methods with Returns ===")
+class Square {
+    side = 5;
+    
+    func getArea() {
+        return side * side
+    }
+}
+
+square = new Square()
+area = square.getArea()
+print(area)
+
+// 5. Multiple instances
+print("\n=== Multiple Instances ===")
+class Color {
+    name = "Red";
+    value = 255;
+}
+
+color1 = new Color()
+color2 = new Color()
+print(color1.name)
+print(color2.name)
+color2.name = "Blue"
+print(color1.name)
+print(color2.name)
+
+// 6. Simple inheritance (basic)
+print("\n=== Class Definition Inheritance ===")
+class Vehicle {
+    wheels = 4;
+}
+
+class Car extends Vehicle {
+    doors = 4;
+}
+
+car = new Car()
+print(car.doors)
+print(car.wheels)
+
+// 7. Method parameters
+print("\n=== Method Parameters ===")
+class Adder {
+    base = 10;
+    
+    func add(n) {
+        result = base + n
+        return result
+    }
+}
+
+adder = new Adder()
+sum = adder.add(5)
+print(sum)
+
+// 8. Object state
+print("\n=== Object State ===")
+class Counter {
+    count = 0;
+}
+
+counter = new Counter()
+print(counter.count)
+counter.count = 1
+print(counter.count)
+counter.count = 2
+print(counter.count)
+
+// 9. Multiple properties
+print("\n=== Multiple Properties ===")
+class Book {
+    title = "Untitled";
+    author = "Unknown";
+    pages = 0;
+}
+
+book = new Book()
+book.title = "Platypus Guide"
+book.author = "Developer"
+book.pages = 150
+print(book.title)
+print(book.author)
+print(book.pages)
+
+// 10. Method chaining concept
+print("\n=== Methods with State ===")
+class Logger {
+    message = "Log: ";
+    
+    func log(text) {
+        output = message + text
+        print(output)
+    }
+}
+
+logger = new Logger()
+logger.log("Starting")
+logger.message = "Info: "
+logger.log("Running")
+
+

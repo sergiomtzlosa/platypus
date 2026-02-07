@@ -1,0 +1,89 @@
+// For and ForEach Loop Examples (using new for/foreach syntax)
+
+// 1. FOR LOOP - Traditional C-style
+print("=== For Loop (Counter-based) ===")
+
+for (i = 0; i < 5; i = i + 1) {
+    print(i)
+}
+
+// 2. FOR LOOP - With custom step
+print("\n=== For Loop (Custom Step) ===")
+
+for (count = 0; count <= 10; count = count + 2) {
+    print(count)
+}
+
+// 3. FOR LOOP - Countdown
+print("\n=== For Loop (Countdown) ===")
+
+for (num = 5; num > 0; num = num - 1) {
+    print(num)
+}
+
+// 4. FOREACH LOOP - Array iteration
+print("\n=== ForEach Loop ===")
+
+fruits = ["Apple", "Banana", "Cherry"]
+for (fruit in fruits) {
+    print(fruit)
+}
+
+// 5. FOR LOOP - With accumulator (Sum)
+print("\n=== For Loop (Sum Accumulator) ===")
+
+total = 0
+for (i = 1; i <= 10; i = i + 1) {
+    total = total + i
+}
+print(total)
+
+// 6. FOR LOOP - Product (Factorial)
+print("\n=== For Loop (Product/Factorial) ===")
+
+product = 1
+for (x = 1; x <= 5; x = x + 1) {
+    product = product * x
+}
+print(product)
+
+// 7. NESTED FOR LOOPS - Pattern printing
+print("\n=== Nested For Loops (Triangle Pattern) ===")
+
+for (row = 1; row <= 5; row = row + 1) {
+    for (col = 1; col <= row; col = col + 1) {
+        print(col)
+    }
+}
+
+// 8. FOR LOOP - Max value search
+print("\n=== For Loop (Find Max) ===")
+
+max = 3
+values = [3, 7, 2, 9, 1, 5]
+for (v in values) {
+    if (v > max) {
+        max = v
+    }
+}
+print(max)
+
+// 9. FOR LOOP - Multiple iterations with nested loops
+print("\n=== For Loop (Multiple Iterations) ===")
+
+for (i = 0; i < 3; i = i + 1) {
+    for (j = 0; j < 3; j = j + 1) {
+        print(j)
+    }
+}
+
+// 10. FOR LOOP - Power calculation
+print("\n=== For Loop (Power: 2^5) ===")
+
+power = 1
+for (exp = 0; exp < 5; exp = exp + 1) {
+    power = power * 2
+}
+print(power)
+
+

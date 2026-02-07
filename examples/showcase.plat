@@ -1,0 +1,33 @@
+// Comprehensive examples demonstrating Platypus features
+
+// 1. Dynamic variable assignment
+greeting = "Hello, Platypus!"
+count = 42
+pi = 3.14159
+
+print(greeting)
+print(count)
+
+// 2. Functions
+func add(a, b): Number {
+    return a + b
+}
+
+result = add(10, 32)
+print(result)
+
+// 3. Arrays  
+items = [1, 2, 3]
+print(items)
+
+// 4. Pattern matching
+func checkType(value): String {
+    match (typeof(value)) {
+        case "Number" => "number"
+        case "String" => "string"
+        case _ => "other"
+    }
+}
+
+print(checkType(42))
+

@@ -1,0 +1,31 @@
+// Test that external assignment to private variables is blocked
+
+class Config {
+    apiKey = "secret123"
+    _internalToken = "token456"
+    
+    func setToken(newToken) {
+        _internalToken = newToken
+    }
+    
+    func getToken() {
+        print(_internalToken)
+    }
+}
+
+config = new Config()
+
+// This works - reading public property
+print(config.apiKey)
+
+// This works - setting public property
+config.apiKey = "newSecret"
+print(config.apiKey)
+
+// This works - method can modify private property
+config.setToken("newToken789")
+config.getToken()
+
+// This should fail - trying to set private property from outside
+print("Trying to set private _internalToken from outside:")
+config._internalToken = "hacked"

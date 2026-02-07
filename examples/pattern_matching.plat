@@ -1,0 +1,18 @@
+// Pattern matching example
+func describeValue(value): String {
+    result = match (typeof(value)) {
+        case "String" => "It's a string!"
+        case "Number" => "It's a number!"
+        case "Boolean" => "It's a boolean!"
+        case "Array" => "It's an array!"
+        case _ => "Unknown type!"
+    }
+    return result
+}
+
+// Test pattern matching
+print(describeValue("Platypus"))
+print(describeValue(42))
+print(describeValue(true))
+print(describeValue([1, 2, 3]))
+print(describeValue(null))

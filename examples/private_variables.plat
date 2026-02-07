@@ -1,0 +1,55 @@
+// Example demonstrating private variables with "_" prefix
+
+class Person {
+    name = "John"
+    _secret = "password123"
+    
+    func getName() {
+        print(name)
+    }
+    
+    func getSecret() {
+        // Can access private variable from within method
+        print(_secret)
+    }
+    
+    func revealSecret() {
+        print("The secret is: " + _secret)
+    }
+    
+    func changeSecret(newSecret) {
+        _secret = newSecret
+    }
+}
+
+person = new Person()
+
+// Public property access works
+print("Public name:")
+print(person.name)
+
+// Public property assignment works
+person.name = "Alice"
+print("Modified name:")
+print(person.name)
+
+// Call method to access private property
+print("\nAccessing private property via method:")
+person.getSecret()
+
+print("Revealing secret via method:")
+person.revealSecret()
+
+// Modify private property via method
+print("\nModifying private property via method:")
+person.changeSecret("newSecretValue")
+person.revealSecret()
+
+// This would fail - trying to access private property from outside
+// print(person._secret)
+
+// This would fail - trying to assign private property from outside
+// person._secret = "hacked"
+
+print("\nPrivate variable encapsulation works!")
+

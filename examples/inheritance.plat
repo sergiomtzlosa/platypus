@@ -1,0 +1,163 @@
+// Class Inheritance Examples
+// Demonstrates inheritance and property inheritance in Platypus
+
+print("=== Basic Inheritance ===")
+class Animal {
+    name = "Unknown";
+    species = "Unknown";
+}
+
+class Dog extends Animal {
+    breed = "Mixed";
+}
+
+dog = new Dog()
+dog.name = "Rex"
+dog.species = "Canine"
+dog.breed = "Golden Retriever"
+print(dog.name)
+print(dog.species)
+print(dog.breed)
+
+print("\n=== Inheritance with Properties ===")
+class Vehicle {
+    brand = "Generic";
+    speed = 0;
+}
+
+class Car extends Vehicle {
+    doors = 4;
+    trunk = true;
+}
+
+car = new Car()
+car.brand = "Toyota"
+car.speed = 100
+print("Brand: " + car.brand)
+print("Speed: ")
+print(car.speed)
+print("Doors: ")
+print(car.doors)
+print("Has trunk: ")
+print(car.trunk)
+
+print("\n=== Multi-level Inheritance ===")
+class Being {
+    alive = true;
+}
+
+class Creature extends Being {
+    hasHair = true;
+}
+
+creature = new Creature()
+print("Is alive: ")
+print(creature.alive)
+print("Has hair: ")
+print(creature.hasHair)
+
+print("\n=== Inheritance with Property Override ===")
+class Person {
+    firstName = "John";
+    lastName = "Doe";
+    age = 0;
+}
+
+class Employee extends Person {
+    employeeId = 0;
+    department = "Unknown";
+    salary = 0;
+}
+
+employee = new Employee()
+employee.firstName = "Alice"
+employee.lastName = "Smith"
+employee.age = 28
+employee.employeeId = 12345
+employee.department = "Engineering"
+employee.salary = 75000
+
+print("Name: " + employee.firstName + " " + employee.lastName)
+print("ID: ")
+print(employee.employeeId)
+print("Department: " + employee.department)
+print("Age: ")
+print(employee.age)
+print("Salary: ")
+print(employee.salary)
+
+print("\n=== Bank Account Hierarchy ===")
+class Account {
+    accountNumber = "0000";
+    balance = 0;
+}
+
+class SavingsAccount extends Account {
+    interestRate = 2.5;
+    minBalance = 100;
+}
+
+class CheckingAccount extends Account {
+    monthlyFee = 10;
+}
+
+savingsAccount = new SavingsAccount()
+savingsAccount.accountNumber = "SAV001"
+savingsAccount.balance = 1000
+print("Savings Account: " + savingsAccount.accountNumber)
+print("Balance: ")
+print(savingsAccount.balance)
+print("Interest Rate: ")
+print(savingsAccount.interestRate)
+print("Min Balance: ")
+print(savingsAccount.minBalance)
+
+checkingAccount = new CheckingAccount()
+checkingAccount.accountNumber = "CHK001"
+checkingAccount.balance = 500
+print("\nChecking Account: " + checkingAccount.accountNumber)
+print("Balance: ")
+print(checkingAccount.balance)
+print("Monthly Fee: ")
+print(checkingAccount.monthlyFee)
+
+print("\n=== Shape Hierarchy ===")
+class Shape {
+    color = "Unknown";
+    filled = false;
+}
+
+class Circle extends Shape {
+    radius = 1;
+}
+
+class Rectangle extends Shape {
+    width = 1;
+    height = 1;
+}
+
+circle = new Circle()
+circle.color = "Red"
+circle.filled = true
+circle.radius = 5
+print("Circle color: " + circle.color)
+print("Circle filled: ")
+print(circle.filled)
+print("Circle radius: ")
+print(circle.radius)
+
+rectangle = new Rectangle()
+rectangle.color = "Blue"
+rectangle.filled = false
+rectangle.width = 10
+rectangle.height = 5
+print("\nRectangle color: " + rectangle.color)
+print("Rectangle filled: ")
+print(rectangle.filled)
+print("Rectangle width: ")
+print(rectangle.width)
+print("Rectangle height: ")
+print(rectangle.height)
+
+print("\n=== Inheritance Complete ===")
+

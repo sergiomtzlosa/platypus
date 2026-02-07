@@ -1,0 +1,26 @@
+// Test that property modifications in methods work correctly
+
+class Counter {
+    count = 0
+    
+    func increment() {
+        count = count + 1
+    }
+    
+    func getCount() {
+        print(count)
+    }
+}
+
+c = new Counter()
+print("Initial count:")
+c.getCount()
+
+c.increment()
+print("After first increment:")
+c.getCount()
+
+c.increment()
+c.increment()
+print("After two more increments:")
+c.getCount()

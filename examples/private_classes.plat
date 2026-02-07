@@ -1,0 +1,39 @@
+// Example demonstrating private classes with "_" prefix
+
+class _PrivateImplementation {
+    data = "secret implementation"
+    
+    func getData() {
+        print(data)
+    }
+}
+
+class PublicAPI {
+    internalData = "public data"
+    
+    func usePrivateClass() {
+        // Can instantiate private classes from within public classes
+        impl = new _PrivateImplementation()
+        print("Accessing private class implementation:")
+        impl.getData()
+    }
+}
+
+func createPrivateInstance() {
+    // Can instantiate private classes from within functions
+    impl = new _PrivateImplementation()
+    impl.getData()
+    return impl
+}
+
+print("=== Using Public API ===")
+api = new PublicAPI()
+api.usePrivateClass()
+
+print("")
+print("=== Creating Private Class from Function ===")
+instance = createPrivateInstance()
+
+print("")
+print("=== Attempting to instantiate private class from global scope (will fail) ===")
+print("(Private classes cannot be instantiated from global scope)")
