@@ -1,0 +1,100 @@
+// Platypus Built-in Functions Example
+// Demonstrates: print, typeof, len, and map
+
+print("=== Built-in Functions Demo ===")
+print("")
+
+// 1. print() - Print values to stdout
+print("1. PRINT FUNCTION")
+print("Hello, Platypus!")
+print(42)
+print(3.14159)
+print(true)
+print(false)
+print(null)
+print([1, 2, 3, 4, 5])
+print("")
+
+// 2. typeof() - Get the type of a value
+print("2. TYPEOF FUNCTION")
+print("Type of 'Hello': " + typeof("Hello"))
+print("Type of 42: " + typeof(42))
+print("Type of 3.14: " + typeof(3.14))
+print("Type of true: " + typeof(true))
+print("Type of null: " + typeof(null))
+print("Type of [1,2,3]: " + typeof([1, 2, 3]))
+
+// Store some values and check their types
+name = "Alice"
+age = 30
+scores = [95, 87, 92, 88]
+isActive = true
+
+print("")
+print("Variable type checks:")
+print("name is: " + typeof(name))
+print("age is: " + typeof(age))
+print("scores is: " + typeof(scores))
+print("isActive is: " + typeof(isActive))
+print("")
+
+// 3. len() - Get length of arrays and strings
+print("3. LEN FUNCTION")
+text = "Platypus"
+print("Length of 'Platypus':")
+print(len(text))
+
+numbers = [10, 20, 30, 40, 50]
+print("Length of [10, 20, 30, 40, 50]:")
+print(len(numbers))
+
+emptyArray = []
+print("Length of empty array:")
+print(len(emptyArray))
+
+emptyString = ""
+print("Length of empty string:")
+print(len(emptyString))
+print("")
+
+// 4. map() - Apply a function to each element
+print("4. MAP FUNCTION")
+
+// Lambda with map
+nums = [1, 2, 3, 4, 5]
+doubled = map(nums, (x) => x * 2)
+print("Original array:")
+print(nums)
+print("Doubled:")
+print(doubled)
+
+squared = map(nums, (x) => x * x)
+print("Squared:")
+print(squared)
+
+// Map with string concatenation
+words = ["Hello", "Platypus", "World"]
+withExclamation = map(words, (w) => w + "!")
+print("Words:")
+print(words)
+print("With exclamation:")
+print(withExclamation)
+
+// Map with type checking
+mixed = [1, "two", 3, "four", true]
+types = map(mixed, (x) => typeof(x))
+print("Mixed array:")
+print(mixed)
+print("Types:")
+print(types)
+
+// Map with conditionals
+values = [5, 10, 15, 20, 25]
+doubled = map(values, (v) => v * 2)
+print("Values:")
+print(values)
+print("Doubled:")
+print(doubled)
+
+print("")
+print("=== Demo Complete ===")
