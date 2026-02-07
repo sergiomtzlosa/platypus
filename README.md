@@ -4,7 +4,7 @@
 ![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Platypus** is an innovative compiled programming language that blends a mixture of features from Python, JavaScript, and Scala. Written in Rust.
+**Platypus** is an compiled programming language that blends a mixture of features from Python, JavaScript, and Scala. Written in Rust.
 
 ## ✨ Key Features
 
