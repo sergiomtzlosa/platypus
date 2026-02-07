@@ -1,0 +1,151 @@
+// Operators Example - Arithmetic, Comparison, Logical, and Assignment
+
+print("=== ARITHMETIC OPERATORS ===")
+
+// Addition (+)
+a = 10
+b = 5
+sum = a + b
+print("10 + 5 = ")
+print(sum)
+
+// Subtraction (-)
+difference = a - b
+print("10 - 5 = ")
+print(difference)
+
+// Multiplication (*)
+product = a * b
+print("10 * 5 = ")
+print(product)
+
+// Division (/)
+quotient = a / b
+print("10 / 5 = ")
+print(quotient)
+
+print("\n=== COMPARISON OPERATORS ===")
+
+// Equality (==)
+x = 15
+y = 15
+z = 20
+
+print("15 == 15: ")
+print(x == y)
+
+print("15 == 20: ")
+print(x == z)
+
+// Inequality (!=)
+print("15 != 20: ")
+print(x != z)
+
+print("15 != 15: ")
+print(x != y)
+
+// Less than (<)
+print("15 < 20: ")
+print(x < z)
+
+print("20 < 15: ")
+print(z < x)
+
+// Greater than (>)
+print("20 > 15: ")
+print(z > x)
+
+print("15 > 20: ")
+print(x > z)
+
+// Less than or equal (<=)
+print("15 <= 20: ")
+print(x <= z)
+
+print("15 <= 15: ")
+print(x <= y)
+
+// Greater than or equal (>=)
+print("20 >= 15: ")
+print(z >= x)
+
+print("15 >= 15: ")
+print(x >= y)
+
+print("\n=== LOGICAL OPERATORS ===")
+
+// AND (&&)
+condition1 = true
+condition2 = true
+condition3 = false
+
+print("true && true: ")
+print(condition1 && condition2)
+
+print("true && false: ")
+print(condition1 && condition3)
+
+// OR (||)
+print("true || false: ")
+print(condition1 || condition3)
+
+print("false || false: ")
+print(condition3 || condition3)
+
+// NOT (!)
+print("!true: ")
+print(!condition1)
+
+print("!false: ")
+print(!condition3)
+
+print("\n=== ASSIGNMENT OPERATOR (=) ===")
+
+// Simple assignment
+value = 42
+print("value = 42: ")
+print(value)
+
+// Assignment with expressions
+result = 10 + 20 * 2
+print("result = 10 + 20 * 2: ")
+print(result)
+
+// Reassignment
+counter = 0
+print("counter = 0: ")
+print(counter)
+
+counter = counter + 1
+print("counter = counter + 1: ")
+print(counter)
+
+print("\n=== COMBINED OPERATIONS ===")
+
+// Complex expression with multiple operators
+num1 = 10
+num2 = 5
+
+if (num1 > num2 && num1 + num2 > 10) {
+    print("num1 is greater than num2 AND their sum is greater than 10")
+}
+
+if (num1 == num2 || num1 > num2) {
+    print("Either they are equal OR num1 is greater")
+}
+
+// Using arithmetic in comparisons
+if (num1 * 2 >= 20) {
+    print("Double of num1 is at least 20")
+}
+
+// Chained logical operations
+is_valid = true
+is_active = true
+has_permission = false
+
+if (is_valid && is_active && !has_permission) {
+    print("Valid and active, but no permission")
+}
+
+print("\nOperators demonstration complete!")
