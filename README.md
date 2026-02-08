@@ -330,16 +330,6 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 
 MIT License - feel free to use Platypus in your projects!
 
-## 🚧 Future Roadmap
-
-- [ ] Array indexing (`arr[0]`)
-- [ ] For and foreach loop syntax
-- [ ] Object/class system
-- [ ] Import/module system
-- [ ] Native code generation (LLVM backend)
-- [ ] Standard library expansion
-- [ ] Package manager
-
 ## 📞 Support
 
 For questions, issues, or feature requests, please open an issue on the repository.
